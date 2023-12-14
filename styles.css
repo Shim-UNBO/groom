@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+@font-face {
+    font-family: 'Harry Potter Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local("Harry Potter Regular"), url("../font/HARRP___.woff") format('woff');
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+}
+
+header {
+    background-color: transparent;
+    color: white;
+    /* padding: 1rem; */
+    text-align: left;
+    z-index: 1;
+    position: absolute;
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #e50914;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.8em;
+    margin-right: 5px;
+    text-decoration: none;
+    vertical-align: middle;
+    
+}
+
+
+.main-content {
+    position: relative;
+    /* padding: 2rem; */
+}
+
+.trailer video {
+    position: relative;
+    top:0;
+    left:0;
+    z-index: -1;
+    width: 100vw; 
+    height: 50vh; 
+    object-fit: cover; 
+}
+.netflix{
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+.movie-list-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+}
+.movie-list-grid img{
+    margin-top: 0.5rem;
+    width: 13vw;
+    transition: transform 0.2s ease-in-out;
+
+}
+.movie-list-grid img:hover {
+    transform: scale(1.08); 
+    cursor: pointer;
+}
+
+.movie-list-flex {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+}
+.active {
+    background-color: green;
+    color: white;
+}
+#myButton{
+    font-family: 'Bebas Neue', sans-serif;
+}
+.movie-info {
+    position: absolute; 
+    top: 30%; 
+    left: 2%; 
+    color: white;
+    z-index: 2; 
+}
+
+.movie-title {
+    font-family:"Harry Potter Regular", serif;
+    font-size: 3rem; 
+    font-weight: bold; 
+    margin-bottom: 1rem; 
+}
+
+.movie-ranking {
+    background-color: red;
+    display: inline-block; 
+    padding: 0.5rem; 
+    color: white;
+    font-weight: bold;
+    position: relative;
+    top: -20px;
+    left: -10px; 
+    margin-right: 1rem; 
+}
+
+.movie-description {
+    max-width: 45%; 
+    margin-bottom: 1rem; 
+}
+
+.movie-controls button {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;
+    padding: 1rem;
+    margin-right: 1rem;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.movie-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.play-button:before {
+    content: '▶'; 
+    margin-right: 0.5rem;
+}
+
+.info-button:before {
+    content: 'ℹ️'; 
+    margin-right: 0.5rem;
+}

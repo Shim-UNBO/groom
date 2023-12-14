@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Netflix Clone</title>
+</head>
+<body>
+   
+    <header>
+        <div class="logo">NETFLIX</div>
+        <button id="myButton">grid</button>
+    </header>
+
+    <section class="main-content">
+        
+        <div class="trailer">
+            <video autoplay loop muted>
+                <source src="resource/intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="movie-info">
+            <div class="movie-title">Harry Potter</div>
+            <div class="movie-ranking">TOP 10 오늘 시리즈 순위 1위</div>
+            <div class="movie-description">
+                어둠의 세력이 더욱 강력해져 머글 세계와 호그와트까지 위협해온다. 위험한 기운을 감지한 덤블도어 교수는 다가올 전투에 대비하기 위해 해리 포터와 함께 대장정의 길을 나선다.
+            </div>
+            <!-- <div class="movie-controls">
+                <button class="play-button">재생</button>
+                <button class="info-button">상세 정보</button>
+            </div> -->
+        </div>
+        <div class="netflix">NETFLIX ORIGINALS</div>
+        <div class="movie-list-grid">
+            <img src="resource/mo6.jpeg" alt="Movie 1">
+            <img src="resource/mo5.jpeg" alt="Movie 2">
+            <img src="resource/mo4.jpeg" alt="Movie 3">
+            <img src="resource/mo3.jpeg" alt="Movie 4">
+            <img src="resource/mo2.jpeg" alt="Movie 5">
+            <img src="resource/mo1.jpeg" alt="Movie 6">
+            <img src="resource/mo7.jpeg" alt="Movie 7">
+            <img src="resource/mo8.jpeg" alt="Movie 8">
+        </div>
+    </section>
+
+    <footer>
+     
+    </footer>
+    <script>
+        
+        var myButton = document.getElementById("myButton");
+        var movieList = document.querySelector(".movie-list-grid");
+    
+       
+        function changeClass() {
+            myButton.classList.toggle("active");
+            movieList.classList.toggle("movie-list-flex");
+            myButton.innerText = myButton.classList.contains("active") ? "flex" : "grid";
+        }
+    
+        myButton.addEventListener("click", changeClass);
+    </script>
+</body>
+</html>
